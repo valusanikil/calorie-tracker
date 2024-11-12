@@ -1,0 +1,1 @@
+Calorie Tracker is a dynamic website built using frontend technologies like HTML, CSS, JavaScript, and Bootstrap, along with backend technologies including C# and .NET MVC. It helps users monitor their calorie intake based on foods consumed and provides recipe recommendations to support a balanced, healthy diet.
