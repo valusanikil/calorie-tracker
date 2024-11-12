@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+    nav a {
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        text-decoration: none;
+    }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #4CAF50;
+}
+
+#meal-list, #add-meal {
+    margin-top: 1rem;
+}
+
+/* Hero Section */
+#hero-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f4f8;
+    margin-bottom: 20px;
+}
+
+    #hero-section img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        margin-top: 10px;
+        border-radius: 8px;
+    }
+
+/* Benefits Section */
+#benefits-section {
+    text-align: center;
+    margin: 20px auto;
+}
+
+    #benefits-section h2 {
+        color: #4CAF50;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+.benefits-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.benefit {
+    text-align: center;
+    max-width: 200px;
+}
+
+    .benefit img {
+        width: 100%;
+        max-width: 150px; /* Adjust as necessary */
+        height: auto;
+        margin-bottom: 10px;
+        border-radius: 8px;
+    }
+
+    .benefit h3 {
+        color: #4CAF50;
+        font-size: 1.2rem;
+        margin: 10px 0 5px;
+    }
+
+    .benefit p {
+        font-size: 0.9rem;
+        color: #555;
+    }
+
+/* Tips Section */
+#tips-section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 600px;
+}
+
+    #tips-section h2 {
+        color: #4CAF50;
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #tips-section ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    #tips-section li {
+        margin-bottom: 5px;
+        color: #555;
+        font-size: 1rem;
+    }
+
+#benefits-section .benefits-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#benefits-section .benefit {
+    text-align: center;
+    max-width: 200px;
+}
+
+    #benefits-section .benefit img {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+        margin-bottom: 10px;
+        border-radius: 8px;
+    }
+
+/* Container styling for calorie tracker section */
+#tracker-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    /* Section headers */
+    #tracker-container h2 {
+        color: #4CAF50;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+/* Table styling */
+#calorieTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+    #calorieTable th, #calorieTable td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    #calorieTable th {
+        background-color: #f2f2f2;
+        color: #333;
+        font-weight: bold;
+    }
+
+    #calorieTable td {
+        font-size: 1rem;
+        color: #555;
+    }
+
+/* Button styling */
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    button[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+    }
+
+    button.edit-button {
+        background-color: #4CAF50;
+        color: white;
+        margin-right: 5px;
+    }
+
+    button.delete-button {
+        background-color: #f44336;
+        color: white;
+    }
+
+/* Form styling */
+#add-meal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+    #add-meal input[type="date"],
+    #add-meal input[type="number"],
+    #add-meal button[type="submit"] {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    #add-meal input[type="date"],
+    #add-meal input[type="number"] {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    #add-meal button[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        cursor: pointer;
+        border: none;
+    }
+
+        #add-meal button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+/* Media query for mobile responsiveness */
+@media (max-width: 600px) {
+    #add-meal {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+        #add-meal input[type="date"],
+        #add-meal input[type="number"] {
+            max-width: 100%;
+        }
+}
+
+.square-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.container-fluid {
+    padding: 0 20px;
+}
+
+/* Benefit images size */
+.benefit-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Remove extra margin on sections */
+.container-fluid, .jumbotron, .section {
+    margin: 0;
+    padding: 0;
+}

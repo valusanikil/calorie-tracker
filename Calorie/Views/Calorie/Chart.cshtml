@@ -1,0 +1,104 @@
+﻿@model IEnumerable<Calorie.Models.CalorieEntry>
+@using Newtonsoft.Json
+
+<h2 class="text-center my-4">Calorie Intake Chart</h2>
+<div class="d-flex justify-content-center">
+    <!-- Dynamic Calorie Intake Chart -->
+    <canvas id="calorieChart" style="width: 80%; max-width: 900px; height: 400px;"></canvas>
+</div>
+
+<h2 class="text-center my-4">Chart 2 - Weekly Average Calories</h2>
+<div class="d-flex justify-content-center">
+    <canvas id="chart2" style="width: 80%; max-width: 900px; height: 400px;"></canvas>
+</div>
+
+<h2 class="text-center my-4">Chart 3 - Calories Burned by Activity</h2>
+<div class="d-flex justify-content-center">
+    <canvas id="chart3" style="width: 80%; max-width: 900px; height: 400px;"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Dynamic Calorie Intake Chart
+    const calorieData = @Html.Raw(JsonConvert.SerializeObject(Model.Select(e => e.Calories)));
+    const dateLabels = @Html.Raw(JsonConvert.SerializeObject(Model.Select(e => e.Date.ToString("MM/dd"))));
+
+    const ctx = document.getElementById('calorieChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: dateLabels,
+            datasets: [{
+                label: 'Calories',
+                data: calorieData,
+                borderColor: 'rgba(54, 162, 235, 1)',
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                pointBackgroundColor: 'rgba(54, 162, 235, 1)',
+                pointBorderColor: '#fff',
+                fill: true,
+                tension: 0.4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: { title: { display: true, text: 'Date' } },
+                y: { beginAtZero: true, title: { display: true, text: 'Calories' } }
+            }
+        }
+    });
+
+    // Chart 2 - Weekly Average Calories
+    const data2 = [2000, 1900, 2100, 1800, 2300, 2200, 2000];
+    const labels2 = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
+    const ctx2 = document.getElementById('chart2').getContext('2d');
+    new Chart(ctx2, {
+        type: 'bar',
+        data: {
+            labels: labels2,
+            datasets: [{
+                label: 'Average Calories per Day',
+                data: data2,
+                backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: { title: { display: true, text: 'Day of the Week' } },
+                y: { beginAtZero: true, title: { display: true, text: 'Calories' } }
+            }
+        }
+    });
+
+    // Chart 3 - Calories Burned by Activity
+    const data3 = [500, 300, 450, 700];
+    const labels3 = ['Running', 'Cycling', 'Swimming', 'Hiking'];
+
+    const ctx3 = document.getElementById('chart3').getContext('2d');
+    new Chart(ctx3, {
+        type: 'pie',
+        data: {
+            labels: labels3,
+            datasets: [{
+                label: 'Calories Burned',
+                data: data3,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.6)',
+                    'rgba(54, 162, 235, 0.6)',
+                    'rgba(255, 206, 86, 0.6)',
+                    'rgba(75, 192, 192, 0.6)'
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+</script>

@@ -1,0 +1,402 @@
+﻿@{
+    Layout = "_Layout";  // Reference your layout file if needed
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardamom Treats</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        body {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .recipe-heading {
+            text-align: center;
+            background-color: #f8f8f8;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+            .recipe-heading h1 {
+                font-size: 36px;
+                font-weight: 600;
+                color: #333;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .recipe-heading p {
+                font-size: 16px;
+                color: #666;
+                line-height: 1.6;
+            }
+
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .card img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+
+        .card-body h2 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .card-body p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .card-footer {
+            font-size: 14px;
+            color: #888;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .intro-paragraph {
+            background-color: #f0f0f0;
+            padding: 40px 20px;
+            margin: 40px auto;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+            .intro-paragraph h2 {
+                font-size: 36px;
+                font-weight: 600;
+                color: transparent;
+                background: linear-gradient(to right, #28a745, #f1c40f);
+                -webkit-background-clip: text;
+                background-clip: text;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+
+
+        .get-recipe-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #28a745;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+            .get-recipe-btn:hover {
+                background-color: #218838;
+                transform: translateY(-5px);
+            }
+
+        .ingredients {
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 5px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+            .ingredients h3 {
+                font-size: 18px;
+                font-weight: 600;
+                color: #333;
+                margin-bottom: 10px;
+            }
+
+            .ingredients ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+
+                .ingredients ul li {
+                    font-size: 14px;
+                    color: #555;
+                    margin-bottom: 8px;
+                    padding-left: 20px;
+                    position: relative;
+                }
+
+                    .ingredients ul li::before {
+                        content: "•";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        font-size: 18px;
+                        color: #28a745;
+                    }
+    </style>
+</head>
+<body>
+
+    <div class="intro-paragraph">
+        <h2>WELCOME TO CALORIE HUB</h2>
+        <div class="recipe-heading">
+            <p>Calorie Hub is your go-to companion for managing your diet and maintaining a healthy lifestyle. Whether you're aiming to lose weight, gain muscle, or simply eat cleaner, this app helps you track the calories in your food and drinks, making it easier to stay on top of your nutritional goals. With an intuitive interface, detailed food database, and real-time calorie tracking, Calorie Hub ensures you're always informed about the nutritional value of your meals. Take control of your health journey, make mindful eating decisions, and achieve your wellness goals with ease!</p>
+        </div>
+    </div>
+
+    <div class="recipe-container">
+        <div class="recipe-heading">
+            <h1>Our Recipes</h1>
+            <p>At Calorie Hub, we believe that eating healthy should never be boring. Our curated collection of recipes is designed to nourish your body while satisfying your taste buds. Each recipe is carefully crafted with balanced ingredients, offering a perfect blend of flavor and nutrition. Whether you're looking for low-calorie snacks, high-protein meals, or plant-based delights, our diverse range of recipes has something for everyone. Discover new ways to eat well, stay full, and enjoy every bite, all while keeping track of your nutritional goals.</p>
+        </div>
+
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Recipe 1 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="~/images/recipe 1.jpeg" class="card-img-top" alt="Recipe 1 Image">
+                        <div class="card-body">
+                            <h2 class="card-title">Saag Paneer</h2>
+                            <p class="card-text">A deliciously spiced vegetarian dish made with cottage cheese and a flavorful spinach-based gravy.</p>
+                            <div class="ingredients">
+                                <h3>Ingredients</h3>
+                                <ul>
+                                    <li>200g Paneer</li>
+                                    <li>1 bunch of spinach</li>
+                                    <li>1 onion</li>
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between">
+                            <span>30 min</span>
+                            <span>210 kcal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 2 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="~/images/recipe 2.jpeg" class="card-img-top" alt="Recipe 2 Image">
+                        <div class="card-body">
+                            <h2 class="card-title">Thandai</h2>
+                            <p class="card-text">A refreshing, spiced milk drink popular in India, especially during festivals like Holi.</p>
+                            <div class="ingredients">
+                                <h3>Ingredients</h3>
+                                <ul>
+                                    <li>1 cup full cream milk</li>
+                                    <li>2 tbsp sugar</li>
+                                    <li>1/4 tsp cardamom powder</li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between">
+                            <span>20 min</span>
+                            <span>180 kcal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 3 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="~/images/recipe 3.jpeg" class="card-img-top" alt="Recipe 3 Image">
+                        <div class="card-body">
+                            <h2 class="card-title">Basmati Rice</h2>
+                            <p class="card-text">Fragrant and fluffy, Basmati rice pairs perfectly with a variety of curries and stews.</p>
+                            <div class="ingredients">
+                                <h3>Ingredients</h3>
+                                <ul>
+                                    <li>1 cup Basmati rice</li>
+                                    <li>2 cups water</li>
+                                    <li>1 tsp ghee</li>
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between">
+                            <span>25 min</span>
+                            <span>250 kcal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 4 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="~/images/recipe 4.jpeg" class="card-img-top" alt="Recipe 4 Image">
+                        <div class="card-body">
+                            <h2 class="card-title">Chicken Tikka Masala</h2>
+                            <p class="card-text">Chicken chunks marinated in spices, grilled to perfection, and cooked in a rich, creamy tomato gravy</p>
+                            <div class="ingredients">
+                                <h3>Ingredients</h3>
+                                <ul>
+                                    <li>500g chicken breast</li>
+                                    <li>1 cup yogurt</li>
+                                    <li>1 tbsp ginger-garlic paste</li>
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between">
+                            <span>35 min</span>
+                            <span>330 kcal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 5 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="~/images/recipe 5.jpeg" class="card-img-top" alt="Recipe 5 Image">
+                        <div class="card-body">
+                            <h2 class="card-title">Papeta Par Eda</h2>
+                            <p class="card-text">A traditional Parsi breakfast dish made with potatoes and eggs, spiced with garam masala and green chilies.</p>
+                            <div class="ingredients">
+                                <h3>Ingredients</h3>
+                                <ul>
+                                    <li>2 potatoes, boiled and sliced</li>
+                                    <li>2 eggs</li>
+                                    <li>1 onion, chopped</li>
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between">
+                            <span>15 min</span>
+                            <span>220 kcal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 6 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="~/images/recipe 6.jpeg" class="card-img-top" alt="Recipe 6 Image">
+                        <div class="card-body">
+                            <h2 class="card-title">Sweet Potato and Star Fruit Chaat</h2>
+                            <p class="card-text">A tangy and sweet chaat made with roasted sweet potatoes and star fruit, topped with spices and chutneys.</p>
+                            <div class="ingredients">
+                                <h3>Ingredients</h3>
+                                <ul>
+                                    <li>1 sweet potato, boiled and cubed</li>
+                                    <li>2 star fruits, sliced</li>
+                                    <li>1 tsp chaat masala</li>
+                                
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between">
+                            <span>40 min</span>
+                            <span>350 kcal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 7 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="~/images/recipe 7.jpeg" class="card-img-top" alt="Recipe 7 Image">
+                        <div class="card-body">
+                            <h2 class="card-title">Yellow Rice</h2>
+                            <p class="card-text">A vibrant, aromatic rice dish made with saffron, turmeric, and a few other spices, perfect as a side dish.</p>
+                            <div class="ingredients">
+                                <h3>Ingredients</h3>
+                                <ul>
+                                    <li>1 cup Basmati rice</li>
+                                    <li>1 tsp saffron strands</li>
+                                    <li>1 tsp turmeric powder</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between">
+                            <span>30 min</span>
+                            <span>200 kcal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 8 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="~/images/recipe 8.jpeg" class="card-img-top" alt="Recipe 8 Image">
+                        <div class="card-body">
+                            <h2 class="card-title">Khichdi</h2>
+                            <p class="card-text">A comforting and healthy dish made with rice, lentils, and mild spices, perfect for a light meal.</p>
+                            <div class="ingredients">
+                                <h3>Ingredients</h3>
+                                <ul>
+                                    <li>1/2 cup rice</li>
+                                    <li>1/4 cup split yellow moong dal</li>
+                                    <li>1 tsp cumin seeds</li>
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between">
+                            <span>20 min</span>
+                            <span>320 kcal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 9 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="~/images/recipe 9.jpeg" class="card-img-top" alt="Recipe 9 Image">
+                        <div class="card-body">
+                            <h2 class="card-title">Vegan Dal</h2>
+                            <p class="card-text">A hearty, plant-based lentil curry made with spices and served with rice or flatbreads.</p>
+                            <div class="ingredients">
+                                <h3>Ingredients</h3>
+                                <ul>
+                                    <li>1 cup red lentils</li>
+                                    <li>1 onion, chopped</li>
+                                    <li>1 tomato, chopped</li>
+                                  
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between">
+                            <span>10 min</span>
+                            <span>150 kcal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Calorie.Models.CalorieEntry>
+@{
+    ViewData["Title"] = "Calorie Tracker";
+}
+
+<div class="container mt-4">
+    <div class="card p-4 shadow-sm">
+        <section id="meal-list">
+            <h2 class="text-success mb-3">Your Daily Calorie Intake</h2>
+            <table id="calorieTable" class="table table-bordered table-striped">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Date</th>
+                        <th>Calories</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var entry in Model)
+                    {
+                        <tr>
+                            <td>@entry.Date.ToShortDateString()</td>
+                            <td>@entry.Calories</td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@entry.Id">Edit</a> |
+                                <a asp-action="Delete" asp-route-id="@entry.Id">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </section>
+
+        <section id="add-meal" class="mt-4">
+            <h2 class="text-success mb-3">Add Calorie Intake</h2>
+            <form asp-action="Create" method="post" class="form-inline">
+                <div class="form-group mb-2 mr-2">
+                    <label for="entry-date" class="sr-only">Date</label>
+                    <input type="date" name="Date" class="form-control" id="entry-date" required>
+                </div>
+                <div class="form-group mb-2 mr-2">
+                    <label for="entry-calories" class="sr-only">Calories</label>
+                    <input type="number" name="Calories" class="form-control" id="entry-calories" placeholder="Calories" required>
+                </div>
+                <button type="submit" class="btn btn-success mb-2">Add Entry</button>
+            </form>
+        </section>
+    </div>
+</div>
