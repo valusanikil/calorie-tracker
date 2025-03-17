@@ -43,42 +43,43 @@ Whether you're **tracking your diet for weight loss, muscle gain, or overall hea
 ### **1️⃣ Home Page - Welcome Section**
 - The landing page introduces the app’s purpose and benefits.
 - Users can navigate to different features from the menu.
-![Home Page](./screenshots/Screenshot-205348.png)
+<img src="assets/Screenshot 2025-03-16 205348.png" alt="">
 
 ### **2️⃣ Features Section**
 - Highlights the main functionalities of the application.
 - Users can understand the value of tracking their calories.
-![Features](./screenshots/Screenshot-205358.png)
+<img src="assets/Screenshot 2025-03-16 205358.png" alt="">
 
 ### **3️⃣ Daily Calorie Intake Tracker**
 - Displays a **table with logged calorie intake** per day.
 - Users can **edit or delete** entries as needed.
-![Calorie Intake](./screenshots/Screenshot-205418.png)
+<img src="assets/Screenshot 2025-03-16 205418.png" alt="">
 
 ### **4️⃣ Recipe Section - Healthy Eating**
 - A collection of **healthy recipes** with nutritional values.
 - Helps users explore **new meal ideas** based on dietary preferences.
-![Recipes](./screenshots/Screenshot-205440.png)
+<img src="assets/Screenshot 2025-03-16 205440.png" alt="">
 
 ### **5️⃣ Recipe Details - Ingredients & Nutrition**
 - Each recipe page includes ingredients, instructions, and **caloric breakdown**.
-![Recipe Details](./screenshots/Screenshot-205457.png)
+<img src="assets/Screenshot 2025-03-16 205457.png" alt="">
+<img src="assets/Screenshot 2025-03-16 205518.png" alt="">
 
 ### **6️⃣ Calorie Charts - Visual Insights**
 - **Line graphs and bar charts** to track intake trends.
 - Helps users identify **patterns and improvements**.
-![Charts](./screenshots/Screenshot-205518.png)
+<img src="assets/Screenshot 2025-03-16 205531.png" alt="">
 
 ### **7️⃣ Calories Burned by Activity**
 - A **pie chart visualization** of calories burned through different exercises.
 - Encourages **physical activity tracking**.
-![Burned Calories](./screenshots/Screenshot-205531.png)
+<img src="assets/Screenshot 2025-03-16 205540.png" alt="">
 
 ### **8️⃣ About Us - Meet the Developers**
 - Showcases the **team behind the project** with LinkedIn profiles.
 - Highlights each member's contributions.
-![Team](./screenshots/Screenshot-205540.png)
-
+<img src="assets/Screenshot 2025-03-16 205601.png" alt="">
+  
 ---
 
 ## **🏗️ Tech Stack & Architecture**
